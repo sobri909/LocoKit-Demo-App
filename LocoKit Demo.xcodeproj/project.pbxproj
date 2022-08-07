@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C91193D7289D4BC1004F116B /* PathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D6289D4BC1004F116B /* PathPolyline.swift */; };
+		C91193DB289D4BD4004F116B /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D8289D4BD4004F116B /* VisitAnnotation.swift */; };
+		C91193DC289D4BD4004F116B /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */; };
+		C91193DD289D4BD4004F116B /* VisitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193DA289D4BD4004F116B /* VisitCircle.swift */; };
+		C91193DF289D55C9004F116B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193DE289D55C9004F116B /* Extensions.swift */; };
+		C9236822289BC27800CC1B1E /* LocoKit_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236821289BC27800CC1B1E /* LocoKit_DemoApp.swift */; };
+		C9236824289BC27800CC1B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236823289BC27800CC1B1E /* RootView.swift */; };
+		C9236826289BC27900CC1B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9236825289BC27900CC1B1E /* Assets.xcassets */; };
+		C9236831289BDD5200CC1B1E /* LocoKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9236830289BDD5200CC1B1E /* LocoKit */; };
+		C9236833289BDE0D00CC1B1E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236832289BDE0D00CC1B1E /* Session.swift */; };
+		C9D77C93289BFA1200BA4EC6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D77C92289BFA1200BA4EC6 /* MapView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C91193D6289D4BC1004F116B /* PathPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathPolyline.swift; path = "../../../LocoKit Demo App/PathPolyline.swift"; sourceTree = "<group>"; };
+		C91193D8289D4BD4004F116B /* VisitAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitAnnotation.swift; path = "../../../LocoKit Demo App/VisitAnnotation.swift"; sourceTree = "<group>"; };
+		C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitAnnotationView.swift; path = "../../../LocoKit Demo App/VisitAnnotationView.swift"; sourceTree = "<group>"; };
+		C91193DA289D4BD4004F116B /* VisitCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitCircle.swift; path = "../../../LocoKit Demo App/VisitCircle.swift"; sourceTree = "<group>"; };
+		C91193DE289D55C9004F116B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C923681E289BC27800CC1B1E /* LocoKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LocoKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9236821289BC27800CC1B1E /* LocoKit_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocoKit_DemoApp.swift; sourceTree = "<group>"; };
+		C9236823289BC27800CC1B1E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C9236825289BC27900CC1B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9236832289BDE0D00CC1B1E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C9236834289BE5D800CC1B1E /* LocoKit-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LocoKit-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C9D77C92289BFA1200BA4EC6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C923681B289BC27800CC1B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9236831289BDD5200CC1B1E /* LocoKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9236815289BC27800CC1B1E = {
+			isa = PBXGroup;
+			children = (
+				C9236820289BC27800CC1B1E /* LocoKit Demo */,
+				C923681F289BC27800CC1B1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C923681F289BC27800CC1B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C923681E289BC27800CC1B1E /* LocoKit Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9236820289BC27800CC1B1E /* LocoKit Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C9236834289BE5D800CC1B1E /* LocoKit-Demo-Info.plist */,
+				C9236821289BC27800CC1B1E /* LocoKit_DemoApp.swift */,
+				C9D77CA4289BFDF900BA4EC6 /* Map */,
+				C9236832289BDE0D00CC1B1E /* Session.swift */,
+				C9236823289BC27800CC1B1E /* RootView.swift */,
+				C9236825289BC27900CC1B1E /* Assets.xcassets */,
+				C91193DE289D55C9004F116B /* Extensions.swift */,
+			);
+			path = "LocoKit Demo";
+			sourceTree = "<group>";
+		};
+		C9D77CA4289BFDF900BA4EC6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C9D77C92289BFA1200BA4EC6 /* MapView.swift */,
+				C91193D6289D4BC1004F116B /* PathPolyline.swift */,
+				C91193D8289D4BD4004F116B /* VisitAnnotation.swift */,
+				C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */,
+				C91193DA289D4BD4004F116B /* VisitCircle.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C923681D289BC27800CC1B1E /* LocoKit Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C923682C289BC27900CC1B1E /* Build configuration list for PBXNativeTarget "LocoKit Demo" */;
+			buildPhases = (
+				C923681A289BC27800CC1B1E /* Sources */,
+				C923681B289BC27800CC1B1E /* Frameworks */,
+				C923681C289BC27800CC1B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LocoKit Demo";
+			packageProductDependencies = (
+				C9236830289BDD5200CC1B1E /* LocoKit */,
+			);
+			productName = "LocoKit Demo";
+			productReference = C923681E289BC27800CC1B1E /* LocoKit Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9236816289BC27800CC1B1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					C923681D289BC27800CC1B1E = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = C9236819289BC27800CC1B1E /* Build configuration list for PBXProject "LocoKit Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9236815289BC27800CC1B1E;
+			packageReferences = (
+				C923682F289BDD5200CC1B1E /* XCRemoteSwiftPackageReference "locokit" */,
+			);
+			productRefGroup = C923681F289BC27800CC1B1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C923681D289BC27800CC1B1E /* LocoKit Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C923681C289BC27800CC1B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9236826289BC27900CC1B1E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C923681A289BC27800CC1B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9236824289BC27800CC1B1E /* RootView.swift in Sources */,
+				C91193DF289D55C9004F116B /* Extensions.swift in Sources */,
+				C9D77C93289BFA1200BA4EC6 /* MapView.swift in Sources */,
+				C9236833289BDE0D00CC1B1E /* Session.swift in Sources */,
+				C9236822289BC27800CC1B1E /* LocoKit_DemoApp.swift in Sources */,
+				C91193DB289D4BD4004F116B /* VisitAnnotation.swift in Sources */,
+				C91193DD289D4BD4004F116B /* VisitCircle.swift in Sources */,
+				C91193DC289D4BD4004F116B /* VisitAnnotationView.swift in Sources */,
+				C91193D7289D4BC1004F116B /* PathPolyline.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C923682A289BC27900CC1B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C923682B289BC27900CC1B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C923682D289BC27900CC1B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5N7VG8DUG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LocoKit-Demo-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location data is needed to demonstrate LocoKit's functionality";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Motion data is needed to demonstrate LocoKit's functionality";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigpaua.LocoKit-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C923682E289BC27900CC1B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5N7VG8DUG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LocoKit-Demo-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location data is needed to demonstrate LocoKit's functionality";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Motion data is needed to demonstrate LocoKit's functionality";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigpaua.LocoKit-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9236819289BC27800CC1B1E /* Build configuration list for PBXProject "LocoKit Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C923682A289BC27900CC1B1E /* Debug */,
+				C923682B289BC27900CC1B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C923682C289BC27900CC1B1E /* Build configuration list for PBXNativeTarget "LocoKit Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C923682D289BC27900CC1B1E /* Debug */,
+				C923682E289BC27900CC1B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C923682F289BDD5200CC1B1E /* XCRemoteSwiftPackageReference "locokit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sobri909/locokit";
+			requirement = {
+				branch = "workout-routes";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9236830289BDD5200CC1B1E /* LocoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C923682F289BDD5200CC1B1E /* XCRemoteSwiftPackageReference "locokit" */;
+			productName = LocoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C9236816289BC27800CC1B1E /* Project object */;
+}

@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "flatbuffers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mustiikhalil/flatbuffers",
+      "state" : {
+        "revision" : "d1bad799d82545f3ab70e6baa86e714927eb4a84",
+        "version" : "0.8.1"
+      }
+    },
+    {
+      "identity" : "grdb.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/GRDB.swift.git",
+      "state" : {
+        "revision" : "23f4254ae36fa19aecd73047c0577a9f49850d1c",
+        "version" : "5.26.0"
+      }
+    },
+    {
+      "identity" : "locokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sobri909/locokit",
+      "state" : {
+        "branch" : "workout-routes",
+        "revision" : "9e88c636746a6f490fb517f0868c34953605867b"
+      }
+    },
+    {
+      "identity" : "upsurge",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alejandro-isaza/Upsurge.git",
+      "state" : {
+        "revision" : "66c66253ab0d1a0988a6efb68f49629cf3e06a84",
+        "version" : "0.11.0"
+      }
+    }
+  ],
+  "version" : 2
+}
