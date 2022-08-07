@@ -4,7 +4,6 @@
 import MapKit
 
 class VisitCircle: MKCircle {
-    
     var color: UIColor?
 
     var renderer: MKCircleRenderer {

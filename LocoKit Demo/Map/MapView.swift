@@ -103,10 +103,11 @@ struct MapView: UIViewRepresentable {
 
         switch movingState {
         case .moving:
-            add(locations, color: .blue, to: map)
+            add(locations, color: .systemGreen, to: map)
 
         case .stationary:
-            add(locations, color: .orange, to: map)
+            add(locations, color: .blue, to: map)
+            addCircle(for: locations, color: .blue, to: map)
 
         case .uncertain:
             add(locations, color: .magenta, to: map)
@@ -130,6 +131,16 @@ struct MapView: UIViewRepresentable {
 
         let circle = VisitCircle(center: center.coordinate, radius: visit.radius2sd)
         circle.color = .orange
+        map.addOverlay(circle, level: .aboveLabels)
+    }
+
+    func addCircle(for locations: [CLLocation], color: UIColor, to map: MKMapView) {
+        guard let center = locations.weightedCenter else { return }
+        let circle = VisitCircle(
+            center: center.coordinate,
+            radius: locations.radius(from: center).with2sd
+        )
+        circle.color = color
         map.addOverlay(circle, level: .aboveLabels)
     }
 

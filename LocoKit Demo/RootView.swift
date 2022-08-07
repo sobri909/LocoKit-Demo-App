@@ -62,9 +62,9 @@ struct RootView: View {
     var settingsBox: some View {
         Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 10) {
             GridRow {
-                dot(color: .brown)
+                dot(color: .orange)
                     .overlay(
-                        dot(color: .orange).offset(x: 8)
+                        dot(color: .brown).offset(x: 8)
                     )
                 Toggle(isOn: $session.showTimelineItems) {
                     Text("Timeline").fixedSize()
@@ -80,7 +80,7 @@ struct RootView: View {
             GridRow {
                 dot(color: .blue)
                     .overlay(
-                        dot(color: Color(uiColor: .magenta))
+                        dot(color: Color(uiColor: .systemGreen))
                             .offset(x: 8)
                     )
                 Toggle(isOn: $session.showLocomotionSamples) {
