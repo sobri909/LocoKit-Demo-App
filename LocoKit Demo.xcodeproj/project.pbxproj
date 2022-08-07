@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C91193D7289D4BC1004F116B /* PathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D6289D4BC1004F116B /* PathPolyline.swift */; };
-		C91193DB289D4BD4004F116B /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D8289D4BD4004F116B /* VisitAnnotation.swift */; };
-		C91193DC289D4BD4004F116B /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */; };
-		C91193DD289D4BD4004F116B /* VisitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193DA289D4BD4004F116B /* VisitCircle.swift */; };
 		C91193DF289D55C9004F116B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91193DE289D55C9004F116B /* Extensions.swift */; };
 		C9236822289BC27800CC1B1E /* LocoKit_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236821289BC27800CC1B1E /* LocoKit_DemoApp.swift */; };
 		C9236824289BC27800CC1B1E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236823289BC27800CC1B1E /* RootView.swift */; };
@@ -18,13 +14,13 @@
 		C9236831289BDD5200CC1B1E /* LocoKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9236830289BDD5200CC1B1E /* LocoKit */; };
 		C9236833289BDE0D00CC1B1E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9236832289BDE0D00CC1B1E /* Session.swift */; };
 		C9D77C93289BFA1200BA4EC6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D77C92289BFA1200BA4EC6 /* MapView.swift */; };
+		C9FBFA75289FC642001A1F2E /* VisitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBFA71289FC642001A1F2E /* VisitCircle.swift */; };
+		C9FBFA76289FC642001A1F2E /* PathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBFA72289FC642001A1F2E /* PathPolyline.swift */; };
+		C9FBFA77289FC642001A1F2E /* VisitAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBFA73289FC642001A1F2E /* VisitAnnotationView.swift */; };
+		C9FBFA78289FC642001A1F2E /* VisitAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBFA74289FC642001A1F2E /* VisitAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C91193D6289D4BC1004F116B /* PathPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathPolyline.swift; path = "../../../LocoKit Demo App/PathPolyline.swift"; sourceTree = "<group>"; };
-		C91193D8289D4BD4004F116B /* VisitAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitAnnotation.swift; path = "../../../LocoKit Demo App/VisitAnnotation.swift"; sourceTree = "<group>"; };
-		C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitAnnotationView.swift; path = "../../../LocoKit Demo App/VisitAnnotationView.swift"; sourceTree = "<group>"; };
-		C91193DA289D4BD4004F116B /* VisitCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitCircle.swift; path = "../../../LocoKit Demo App/VisitCircle.swift"; sourceTree = "<group>"; };
 		C91193DE289D55C9004F116B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C923681E289BC27800CC1B1E /* LocoKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LocoKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9236821289BC27800CC1B1E /* LocoKit_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocoKit_DemoApp.swift; sourceTree = "<group>"; };
@@ -33,6 +29,10 @@
 		C9236832289BDE0D00CC1B1E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C9236834289BE5D800CC1B1E /* LocoKit-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LocoKit-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9D77C92289BFA1200BA4EC6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C9FBFA71289FC642001A1F2E /* VisitCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitCircle.swift; sourceTree = "<group>"; };
+		C9FBFA72289FC642001A1F2E /* PathPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathPolyline.swift; sourceTree = "<group>"; };
+		C9FBFA73289FC642001A1F2E /* VisitAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotationView.swift; sourceTree = "<group>"; };
+		C9FBFA74289FC642001A1F2E /* VisitAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +80,11 @@
 		C9D77CA4289BFDF900BA4EC6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				C9FBFA72289FC642001A1F2E /* PathPolyline.swift */,
+				C9FBFA74289FC642001A1F2E /* VisitAnnotation.swift */,
+				C9FBFA73289FC642001A1F2E /* VisitAnnotationView.swift */,
+				C9FBFA71289FC642001A1F2E /* VisitCircle.swift */,
 				C9D77C92289BFA1200BA4EC6 /* MapView.swift */,
-				C91193D6289D4BC1004F116B /* PathPolyline.swift */,
-				C91193D8289D4BD4004F116B /* VisitAnnotation.swift */,
-				C91193D9289D4BD4004F116B /* VisitAnnotationView.swift */,
-				C91193DA289D4BD4004F116B /* VisitCircle.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -165,14 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9236824289BC27800CC1B1E /* RootView.swift in Sources */,
+				C9FBFA76289FC642001A1F2E /* PathPolyline.swift in Sources */,
 				C91193DF289D55C9004F116B /* Extensions.swift in Sources */,
 				C9D77C93289BFA1200BA4EC6 /* MapView.swift in Sources */,
+				C9FBFA75289FC642001A1F2E /* VisitCircle.swift in Sources */,
+				C9FBFA77289FC642001A1F2E /* VisitAnnotationView.swift in Sources */,
 				C9236833289BDE0D00CC1B1E /* Session.swift in Sources */,
 				C9236822289BC27800CC1B1E /* LocoKit_DemoApp.swift in Sources */,
-				C91193DB289D4BD4004F116B /* VisitAnnotation.swift in Sources */,
-				C91193DD289D4BD4004F116B /* VisitCircle.swift in Sources */,
-				C91193DC289D4BD4004F116B /* VisitAnnotationView.swift in Sources */,
-				C91193D7289D4BC1004F116B /* PathPolyline.swift in Sources */,
+				C9FBFA78289FC642001A1F2E /* VisitAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
