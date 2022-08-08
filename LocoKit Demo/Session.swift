@@ -29,6 +29,7 @@ class Session: ObservableObject {
     // MARK: -
 
     init() {
+        recorder.samplesPerMinute = 25
         timelineSegment = recorder.store.segment(
             where: "deleted = 0 AND endDate > datetime('now','-24 hours') ORDER BY startDate DESC"
         )
