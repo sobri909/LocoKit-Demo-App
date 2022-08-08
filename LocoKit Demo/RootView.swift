@@ -12,16 +12,13 @@ import LocoKit
 struct RootView: View {
 
     @EnvironmentObject var session: Session
-    @State var sheetVisible = true
-
-    var sheetDetents: Array<PresentationDetent> = [.height(100), .height(220), .medium, .large]
 
     var body: some View {
         ZStack {
             MapView().edgesIgnoringSafeArea([.top, .bottom])
             ZStack {
                 Button {
-                    sheetVisible = true
+                    session.sheetVisible = true
                 } label: {
                     Image(systemName: "arrow.up")
                         .imageScale(.large)
@@ -32,7 +29,7 @@ struct RootView: View {
                 .alignBottom()
             }
         }
-        .sheet(isPresented: $sheetVisible) {
+        .sheet(isPresented: $session.sheetVisible) {
             VStack(spacing: 0) {
                 Button {
                     tappedStartStop()
@@ -45,35 +42,30 @@ struct RootView: View {
                 .tint(session.isRecording ? .red : .blue)
                 .padding(20)
 
-                if session.selectedSheetDetent != sheetDetents.first {
+                if session.selectedSheetDetent != session.sheetDetents.first {
                     Divider()
                     settingsBox.padding(20)
 
-                    if session.selectedSheetDetent != sheetDetents.second {
+                    if session.selectedSheetDetent != session.sheetDetents.second {
                         Divider()
                     }
                 }
                 Spacer()
             }
-            .presentationDetents(Set(sheetDetents), selection: $session.selectedSheetDetent)
+            .presentationDetents(Set(session.sheetDetents), selection: $session.selectedSheetDetent)
         }
     }
 
     var settingsBox: some View {
-        Grid(alignment: .leading, horizontalSpacing: 10, verticalSpacing: 10) {
+        Grid(alignment: .leading, horizontalSpacing: 20, verticalSpacing: 12) {
             GridRow {
-                dot(color: .orange)
+                dot(color: .blue)
                     .overlay(
-                        dot(color: .brown).offset(x: 8)
+                        dot(color: Color(uiColor: .systemGreen))
+                            .offset(x: 8)
                     )
-                Toggle(isOn: $session.showTimelineItems) {
-                    Text("Timeline").fixedSize()
-                }
-
-                dot(color: .purple)
-                    .padding(.leading, 10)
-                Toggle(isOn: $session.showFilteredLocations) {
-                    Text("Filtered").fixedSize()
+                Toggle(isOn: $session.showMovingStateDebug) {
+                    Text("MovingState").fixedSize()
                 }
                 .disabled(session.showTimelineItems)
             }
@@ -84,16 +76,32 @@ struct RootView: View {
                             .offset(x: 8)
                     )
                 Toggle(isOn: $session.showLocomotionSamples) {
-                    Text("Samples").fixedSize()
+                    Text("LocomotionSamples").fixedSize()
                 }
                 .disabled(session.showTimelineItems)
-
+            }
+            GridRow {
+                dot(color: .purple)
+                Toggle(isOn: $session.showFilteredLocations) {
+                    Text("Filtered CLLocations").fixedSize()
+                }
+                .disabled(session.showTimelineItems)
+            }
+            GridRow {
                 dot(color: .red)
-                    .padding(.leading, 10)
                 Toggle(isOn: $session.showRawLocations) {
-                    Text("Raw").fixedSize()
+                    Text("Raw CLLocations").fixedSize()
                 }
                 .disabled(session.showTimelineItems)
+            }
+            GridRow {
+                dot(color: .orange)
+                    .overlay(
+                        dot(color: .brown).offset(x: 8)
+                    )
+                Toggle(isOn: $session.showTimelineItems) {
+                    Text("TimelineItems").fixedSize()
+                }
             }
         }
     }

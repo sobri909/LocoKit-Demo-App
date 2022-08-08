@@ -17,11 +17,15 @@ class Session: ObservableObject {
     var loco: LocomotionManager { return LocomotionManager.highlander }
 
     @Published var isRecording = false
+    @Published var sheetVisible = true
+    @Published var showMovingStateDebug = true
     @Published var showTimelineItems = false
     @Published var showRawLocations = true
     @Published var showFilteredLocations = true
     @Published var showLocomotionSamples = true
-    @Published var selectedSheetDetent: PresentationDetent = .height(220)
+    @Published var selectedSheetDetent: PresentationDetent = .height(360)
+
+    let sheetDetents: Array<PresentationDetent> = [.height(100), .height(360), .medium, .large]
 
     var timelineSegment: TimelineSegment { didSet { addSegmentObserver() } }
     private var segmentObserver: AnyCancellable?
