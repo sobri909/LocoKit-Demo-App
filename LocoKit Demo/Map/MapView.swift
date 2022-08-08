@@ -15,6 +15,7 @@ struct MapView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView()
+        map.showsScale = true
         map.isPitchEnabled = false
         map.isRotateEnabled = false
         map.delegate = context.coordinator
@@ -39,6 +40,16 @@ struct MapView: UIViewRepresentable {
             }
 
         } else {
+            if session.showMovingStateDebug {
+                let past = ActivityBrain.highlander.pastSample
+                addCircle(for: past, radius: past.radiusBounded, color: .black, to: map)
+                add(past.filteredLocations, color: .black, to: map)
+
+                let present = ActivityBrain.highlander.presentSample
+                addCircle(for: present, radius: present.radius, color: color(for: present.movingState), to: map)
+                add(present.filteredLocations, color: color(for: present.movingState), to: map)
+            }
+
             var samples: [LocomotionSample] = []
 
             // do these as sets, because need to deduplicate
@@ -60,7 +71,7 @@ struct MapView: UIViewRepresentable {
 
             add(
                 rawLocations.sorted { $0.timestamp < $1.timestamp },
-                color: session.showRawLocations ? .systemRed : .black.withAlphaComponent(0.2),
+                color: session.showRawLocations ? .systemRed : .black.withAlphaComponent(0.1),
                 to: map
             )
             add(
@@ -70,14 +81,49 @@ struct MapView: UIViewRepresentable {
             )
 
             if session.showLocomotionSamples {
-                let segments = session.timelineSegment.timelineItems.map { $0.segments }.reduce([], +)
-                for segment in segments {
-                    add(segment.samples, to: map)
+                let groups = groups(from: samples)
+                for group in groups {
+                    add(group, to: map)
                 }
             }
         }
 
-        zoomToShow(overlays: map.overlays, in: map)
+        if session.sheetVisible {
+            zoomToShow(overlays: map.overlays, in: map)
+        }
+    }
+
+    // MARK: -
+
+    func groups(from samples: [LocomotionSample]) -> [[LocomotionSample]] {
+        var groups: [[LocomotionSample]] = []
+        var currentGroup: [LocomotionSample]?
+
+        for sample in samples where sample.location != nil {
+            let currentState = sample.movingState
+
+            // state changed? close off the previous group, add to the collection, and start a new one
+            if let previousState = currentGroup?.last?.movingState, previousState != currentState {
+
+                // add new sample to previous grouping, to link them end to end
+                currentGroup?.append(sample)
+
+                // add it to the collection
+                groups.append(currentGroup!)
+
+                currentGroup = nil
+            }
+
+            currentGroup = currentGroup ?? []
+            currentGroup?.append(sample)
+        }
+
+        // add the final grouping to the collection
+        if let grouping = currentGroup {
+            groups.append(grouping)
+        }
+
+        return groups
     }
 
     // MARK: - Adding map elements
@@ -101,16 +147,14 @@ struct MapView: UIViewRepresentable {
 
         let locations = samples.compactMap { $0.location }
 
+        add(locations, color: color(for: movingState), to: map)
+    }
+
+    func color(for movingState: MovingState) -> UIColor {
         switch movingState {
-        case .moving:
-            add(locations, color: .systemGreen, to: map)
-
-        case .stationary:
-            add(locations, color: .blue, to: map)
-            addCircle(for: locations, color: .blue, to: map)
-
-        case .uncertain:
-            add(locations, color: .magenta, to: map)
+        case .moving: return .systemGreen
+        case .stationary: return .blue
+        case .uncertain: return .magenta
         }
     }
 
@@ -144,6 +188,13 @@ struct MapView: UIViewRepresentable {
         map.addOverlay(circle, level: .aboveLabels)
     }
 
+    func addCircle(for sample: ActivityBrainSample, radius: CLLocationDistance, color: UIColor, to map: MKMapView) {
+        guard let center = sample.location?.coordinate else { return }
+        let circle = VisitCircle(center: center, radius: radius)
+        circle.color = color
+        map.addOverlay(circle, level: .aboveLabels)
+    }
+
     // MARK: - Zoom
 
     func zoomToShow(overlays: [MKOverlay], in map: MKMapView) {
@@ -159,14 +210,16 @@ struct MapView: UIViewRepresentable {
         }
 
         var bottomPadding: CGFloat = 20
-        if session.selectedSheetDetent == .height(100) {
-            bottomPadding += 100
-        }
-        if session.selectedSheetDetent == .height(220) {
-            bottomPadding += 220
-        }
-        if session.selectedSheetDetent == .medium {
-            bottomPadding += UIScreen.main.bounds.height * 0.5
+        if session.sheetVisible {
+            if session.selectedSheetDetent == .height(100) {
+                bottomPadding += 100
+            }
+            if session.selectedSheetDetent == .height(360) {
+                bottomPadding += 360
+            }
+            if session.selectedSheetDetent == .medium {
+                bottomPadding += UIScreen.main.bounds.height * 0.5
+            }
         }
 
         let padding = UIEdgeInsets(top: 20, left: 20, bottom: bottomPadding, right: 20)
